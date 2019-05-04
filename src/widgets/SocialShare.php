@@ -86,7 +86,7 @@ class SocialShare extends Widget
      *
      * @var array
      */
-    public $linkContainerOptions = ['tag' => 'li'];
+    public $linkContainerOptions = [];
 
 
     /**
