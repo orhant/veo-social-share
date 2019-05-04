@@ -270,8 +270,12 @@ class SocialShare extends Widget
 
         foreach ($this->configurator->getSocialNetworks() as $key => $socialNetwork) {
             if (isset($socialNetwork['class'])) {
+                $driver=$this->createDriver($socialNetwork)
                 $linkOptions = $this->combineOptions($socialNetwork);
-                $linkOptions['href'] = $this->createDriver($socialNetwork)->getLink();
+                $linkOptions['href'] = $driver->getLink();
+                if($driver->getClass()){
+                    $linkOptions['class'] = $driver->getClass();
+                }
                 $linkList[] = Html::tag('a', $this->getLinkLabel($socialNetwork, Inflector::camel2words($key)), $linkOptions);
             }
         }

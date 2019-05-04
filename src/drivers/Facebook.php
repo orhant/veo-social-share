@@ -26,6 +26,7 @@ class Facebook extends AbstractDriver
     {
         $this->url = static::encodeData($this->url);
     }
+    public $class='facebook';
 
     /**
      * {@inheritdoc}
@@ -48,4 +49,5 @@ class Facebook extends AbstractDriver
             ['property' => 'og:image',       'content' => '{imageUrl}'],
         ];
     }
+    
 }

@@ -65,6 +65,8 @@ abstract class AbstractDriver extends BaseObject
      */
     private $_data = [];
 
+    protected $class=[];
+
 
     /**
      * Method should process the share data for current driver.
@@ -258,5 +260,9 @@ abstract class AbstractDriver extends BaseObject
     protected function getMetaTags()
     {
         return [];
+    }
+    protected function getClass()
+    {
+        return $this->class;
     }
 }
