@@ -69,7 +69,7 @@ class SocialShare extends Widget
      *
      * @var array
      */
-    public $containerOptions = ['tag' => 'ul', 'class' => 'mh-social-top'];
+    public $containerOptions = ['tag' => 'div', 'class' => 'mh-social-top'];
 
 
     /**
