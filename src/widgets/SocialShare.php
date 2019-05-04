@@ -201,7 +201,7 @@ class SocialShare extends Widget
     protected function getLinkLabel($driverConfig, $defaultLabel)
     {
         return $this->isIconsEnabled()
-            ? Html::tag('i', '', ['class' => $this->configurator->getIconSelector($driverConfig['class'])])
+            ? Html::tag('span',Html::tag('i', '', ['class' => $this->configurator->getIconSelector($driverConfig['class'])]),['class'=>'mh-share-button'])
             : (isset($driverConfig['label']) ? $driverConfig['label'] : $defaultLabel);
     }
 
