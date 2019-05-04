@@ -33,7 +33,7 @@ class Configurator extends BaseObject implements ConfiguratorInterface, IconsCon
 {
     const DEFAULT_ICONS_MAP = [
         Vkontakte::class     => 'si si-vk',
-        Facebook::class      => 'si si-facebook',
+        Facebook::class      => 'fa fa-facebook',
         Twitter::class       => 'si si-twitter',
         GooglePlus::class    => 'si si-google-plus',
         LinkedIn::class      => 'si si-linkedin',
@@ -78,7 +78,7 @@ class Configurator extends BaseObject implements ConfiguratorInterface, IconsCon
      *
      * @deprecated since 2.3
      */
-    public $enableDefaultIcons = false;
+    public $enableDefaultIcons = true;
     /**
      * Enable icons instead of text labels.
      *
@@ -86,7 +86,7 @@ class Configurator extends BaseObject implements ConfiguratorInterface, IconsCon
      *
      * @since 2.3
      */
-    public $enableIcons = false;
+    public $enableIcons = true;
     /**
      * Enable default icons asset.
      *
@@ -94,7 +94,7 @@ class Configurator extends BaseObject implements ConfiguratorInterface, IconsCon
      *
      * @since 2.3
      */
-    public $enableDefaultAsset = true;
+    public $enableDefaultAsset = false;
     /**
      * Configuration of icons for social network drivers.
      *
