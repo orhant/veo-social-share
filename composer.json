@@ -1,5 +1,5 @@
 {
-  "name": "veo/veo-social-share",
+  "name": "veo-social-share",
   "description": "Extension for sharing on social networks",
   "keywords": ["veo", "widget", "social", "share", "networks", "media"],
   "type": "yii2-extension",
