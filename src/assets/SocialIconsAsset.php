@@ -20,7 +20,7 @@ class SocialIconsAsset extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public $sourcePath = '@vendor/yiimaker/yii2-social-share/src/assets/src';
+    public $sourcePath = '@vendor/veo/social-share/src/assets/src';
     /**
      * {@inheritdoc}
      */
