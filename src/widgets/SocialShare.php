@@ -69,7 +69,17 @@ class SocialShare extends Widget
      *
      * @var array
      */
-    public $containerOptions = ['tag' => 'ul', 'class' => 'social-share'];
+    public $containerOptions = ['tag' => 'ul', 'class' => 'mh-social-top'];
+
+
+    /**
+     * HTML options for links container tag.
+     * If you won't to use it - set `tag` option to `false`.
+     *
+     * @var array
+     */
+    public $buttonsContainerOptions = ['tag' => 'div', 'class' => 'mh-share-buttons clearfix'];
+
     /**
      * HTML options for link container tag.
      * If you won't to use it - set `tag` option to `false`.
@@ -112,13 +122,27 @@ class SocialShare extends Widget
         $containerTag = ArrayHelper::remove($this->containerOptions, 'tag', false);
 
         if ($containerTag) {
+            
             echo Html::beginTag($containerTag, $this->containerOptions);
         }
+
+        $buttonsContainerTag = ArrayHelper::remove($this->buttonsContainerOptions, 'tag', false);
+
+        if ($buttonsContainerTag) {
+            
+            echo Html::beginTag($buttonsContainerTag, $this->buttonsContainerOptions);
+        }
+
+
 
         $wrapTag = ArrayHelper::remove($this->linkContainerOptions, 'tag', false);
 
         foreach ($this->getLinkList() as $link) {
             echo $wrapTag ? Html::tag($wrapTag, $link, $this->linkContainerOptions) : $link;
+        }
+        
+        if ($buttonsContainerTag) {
+            echo Html::endTag($buttonsContainerTag);
         }
 
         if ($containerTag) {
