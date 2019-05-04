@@ -273,9 +273,9 @@ class SocialShare extends Widget
                 $driver=$this->createDriver($socialNetwork);
                 $linkOptions = $this->combineOptions($socialNetwork);
                 $linkOptions['href'] = $driver->getLink();
-                if($driver->getLinkClassOptions()){
-                    $linkOptions['class'] = $driver->getLinkClassOptions();
-                }
+                // if($driver->getLinkClassOptions()){
+                //     $linkOptions['class'] = $driver->getLinkClassOptions();
+                // }
                 $linkList[] = Html::tag('a', $this->getLinkLabel($socialNetwork, Inflector::camel2words($key)), $linkOptions);
             }
         }
