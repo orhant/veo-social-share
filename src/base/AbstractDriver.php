@@ -65,7 +65,7 @@ abstract class AbstractDriver extends BaseObject
      */
     private $_data = [];
 
-    protected $class=[];
+    protected $linkClassOptions=[];
 
 
     /**
@@ -261,8 +261,8 @@ abstract class AbstractDriver extends BaseObject
     {
         return [];
     }
-    protected function getClass()
+    protected function getLinkClassOptions()
     {
-        return $this->class;
+        return $this->linkClassOptions;
     }
 }

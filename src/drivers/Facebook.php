@@ -26,7 +26,7 @@ class Facebook extends AbstractDriver
     {
         $this->url = static::encodeData($this->url);
     }
-    public $class='facebook';
+    public $linkClassOptions='facebook';
 
     /**
      * {@inheritdoc}
