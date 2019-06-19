@@ -28,6 +28,7 @@ class WhatsApp extends AbstractDriver
     protected function processShareData()
     {
         $this->url = static::encodeData($this->url);
+        $this->description = static::encodeData($this->description);
     }
 
     /**
